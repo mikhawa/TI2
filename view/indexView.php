@@ -1,6 +1,3 @@
-<?php
-var_dump($_POST);
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,7 +14,13 @@ var_dump($_POST);
     <img src="img/email.png" alt="image email">
     <form id="formulaire" method="post" action="">
         <h2>Laissez-nous un message</h2>
-        <h3 id="status" class=""></h3>
+        <?php
+        if(isset($viewmessage)):
+        ?>
+        <h3 id="status" class=""><?=$viewmessage?></h3>
+        <?php
+        endif;
+        ?>
         <!--            <h3 id="status" class="OK">Votre message est enregistré, merci.</h3>-->
         <!--            <h3 id="status" class="Erreur">Une erreur s'est produite lors de l'enregistrement de votre message.</h3>-->
         <div class="field">
@@ -42,22 +45,34 @@ var_dump($_POST);
         </div>
 
     </form>
-    <div id="captchaDiv">
-        <p id="captcha"></p>
-        <button id="captchaRefresh">Refresh</button>
-        <input id="captchaInput" type="text" placeholder="Entrez le captcha" class="invalidCaptcha"><span></span>
-    </div>
+
 </main>
+<div id="captchaDiv">
+    <p id="captcha"></p>
+    <button id="captchaRefresh">Refresh</button>
+    <input id="captchaInput" type="text" placeholder="Entrez le captcha" class="invalidCaptcha"><span></span>
+</div>
 <aside>
+    <?php
+    if($nbMessage===0):
+    ?>
+        <h2>Pas encore de message</h2>
+    <?php
+    else:
+    ?>
     <h2>Messages précédents</h2>
+        <?php
+        foreach ($formatMessage as $item):
+        ?>
     <article class="message">
-        <p><a href="#">Lorem</a> a envoyé ce message le 01-02-2023 à 09h12</p>
-        <p>Omnis cupiditate blanditiis delectus aliquam molestiae voluptatem modi. Facilis, doloremque. Recusandae veniam hic deserunt non dolorem fugiat quam incidunt exercitationem in pariatur voluptates cum ex ullam nesciunt dolorum mollitia, laudantium, necessitatibus corporis vitae? Laboriosam necessitatibus cumque ex rerum officia pariatur obcaecati commodi quo, iure autem in modi porro delectus atque voluptate tempora repellat corporis quam veniam fugiat eum quas, nobis, itaque expedita?</p>
+        <p><a href="mailto:<?=$item['usermail']?>"><?=$item['firstname']?> <?=$item['lastname']?></a> a envoyé ce message le <?=$item['datemessage']?></p>
+        <p><?=$item['message']?></p>
     </article>
-    <article class="message">
-        <p><a href="#">Ipsum</a> a envoyé ce message le 25-01-2023 à 15h34</p>
-        <p>Corrupti in libero tempore sed totam distinctio ea? Eaque distinctio consequatur cum officia facere, dignissimos fuga deserunt sunt ipsum dolorem et molestias magni nostrum enim cumque! Maiores quos eos quidem laboriosam error quis, earum eum labore aliquid consectetur nostrum enim possimus reiciendis?</p>
-    </article>
+    <?php
+        endforeach;
+    endif;
+    ?>
+
 </aside>
 
 <script src="js/captcha.js"></script>
