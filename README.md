@@ -8,6 +8,9 @@
     config.php
     config.php.ini
     
+    datas/
+        datas/ti2.sql
+    
     public/
         public/index.php
 
