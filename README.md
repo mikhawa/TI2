@@ -7,22 +7,22 @@
     .gitignore
     config.php
     config.php.ini
-    
     datas/
         datas/ti2.sql
-    
+        datas/fig1_vue_smartphone.png
+        datas/fig2_vue_tablette.png
+        datas/fig3_vue_desktop.png
+        datas/consignes.pdf
+        datas/eval.pdf
     public/
         public/index.php
-
-    public/js/
-        public/js/captcha.js
-
-    public/css/
+        public/js/
+            public/js/captcha.js
+        public/css/
         public/css/style.css
         public/css/captcha.css
-
-    public/img/
-        public/img/email.png
-
+        public/img/
+            public/img/email.png
     view/
         view/indexView.php
+
