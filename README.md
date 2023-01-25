@@ -2,6 +2,12 @@
 
 ## WEB 2022 - 2023
 
+### PDF des consignes et la grille d'évaluation
+
+[consignes.pdf](https://github.com/mikhawa/TI2/raw/main/datas/consignes.pdf)
+
+[eval.pdf](https://github.com/mikhawa/TI2/raw/main/datas/eval.pdf)
+
 ### Structure des fichiers
 
     .gitignore
@@ -19,10 +25,13 @@
         public/js/
             public/js/captcha.js
         public/css/
-        public/css/style.css
-        public/css/captcha.css
+            public/css/style.css
+            public/css/captcha.css
         public/img/
             public/img/email.png
     view/
         view/indexView.php
 
+### Formats responsive
+
+![alt text](https://raw.githubusercontent.com/mikhawa/TI2/main/datas/fig1_vue_smartphone.png "Smartphone")
