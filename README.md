@@ -34,4 +34,14 @@
 
 ### Formats responsive
 
+#### Smartphone
+
 ![alt text](https://raw.githubusercontent.com/mikhawa/TI2/main/datas/fig1_vue_smartphone.png "Smartphone")
+
+#### Tablettes
+
+![alt text](https://raw.githubusercontent.com/mikhawa/TI2/main/datas/fig2_vue_tablette.png "Tablettes")
+
+#### Desktop
+
+![alt text](https://raw.githubusercontent.com/mikhawa/TI2/main/datas/fig3_vue_desktop.png "Desktop")
